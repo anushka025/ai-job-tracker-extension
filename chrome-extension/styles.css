@@ -1,0 +1,50 @@
+/* JobTracker Pro - Compact button for job cards */
+
+.jobtracker-save-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  margin-left: 8px;
+  background: white;
+  border: 1px solid #10b981;
+  border-radius: 16px;
+  color: #10b981;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: -apple-system, system-ui, sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.jobtracker-save-btn:hover {
+  background: #f0fdf4;
+  transform: scale(1.05);
+}
+
+.jobtracker-save-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.jobtracker-save-btn.success {
+  background: #d1fae5;
+  border-color: #10b981;
+  color: #047857;
+}
+
+.jobtracker-save-btn.error {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #dc2626;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
