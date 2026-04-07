@@ -1,70 +1,65 @@
-# LinkedIn Job Tracker Chrome Extension
+# 🚀 LinkedIn Job Tracker + AI Assistant
 
-A Chrome extension that lets you save LinkedIn job postings directly into a personal job tracking dashboard with one click.
+Chrome extension to save LinkedIn jobs in one click and analyze them with AI to improve job search decisions.
 
-## 🚀 Features
+---
 
-- Adds a **“Save to JobTracker” button** directly to LinkedIn job search results
-- Extracts:
-  - Job title
-  - Company name
-  - Location
-  - Unique job link
-- Prevents duplicate job entries
-- Stores applications in a Supabase backend
-- Handles LinkedIn’s dynamic and obfuscated DOM structure
+## ✨ Features
+
+- One-click **“Save to JobTracker”** button on LinkedIn jobs  
+- Extracts job title, company, location, and link  
+- Prevents duplicate job entries  
+- Stores data in Supabase backend  
+
+---
+
+## 🤖 AI Features
+
+- **Resume ↔ Job Match Score**  
+  Match %, missing skills, and resume improvement suggestions  
+
+- **Auto Notes Generation**  
+  “Why I applied” + interview talking points  
+
+- **Smart Tagging**  
+  Categorizes jobs into Good Fit, Stretch, Low Priority  
+
+---
 
 ## 🧠 Technical Highlights
 
-- Built a **robust DOM parsing system** to handle LinkedIn’s frequently changing UI
-- Designed fallback strategies for extracting structured data from unstructured job cards
-- Implemented **duplicate detection logic** using normalized job links
-- Uses **MutationObserver** to dynamically inject UI into LinkedIn pages
-- Handles authentication using Supabase JWT tokens
+- Robust DOM parsing for LinkedIn’s dynamic and obfuscated UI  
+- MutationObserver-based injection for real-time UI updates  
+- Fallback extraction strategies for inconsistent job cards  
+- Integrated Groq LLM APIs for AI-powered insights  
+
+---
 
 ## 🛠 Tech Stack
 
-- JavaScript (Chrome Extension APIs)
-- Supabase (Database + Auth)
-- HTML/CSS (Extension UI)
-- LinkedIn DOM reverse engineering
+- JavaScript (Chrome Extension APIs)  
+- Supabase (Database + Auth)  
+- HTML/CSS  
+- Groq API  
 
-## ⚡ Challenges Solved
+---
 
-- LinkedIn uses **obfuscated class names**, so selectors had to rely on:
-  - aria-labels
-  - partial attribute matching
-  - DOM traversal strategies
-- Job metadata is **not co-located**, requiring:
-  - intelligent parent traversal
-  - selector ranking
-- Avoiding incorrect data like:
-  - "About" instead of company name
-  - "Remote" instead of actual location
+## ⚡ Challenges
 
-## 📸 Demo
+- Extracting reliable data from obfuscated and inconsistent DOM  
+- Avoiding incorrect fields like “About” or generic locations  
+- Handling duplicate detection via normalized job links  
 
-(Add screenshots or screen recording here)
-
-## 🧩 How it works
-
-1. Detects LinkedIn job cards using DOM observation
-2. Injects a “Save” button next to each job
-3. Extracts structured data from the job card
-4. Sends data to Supabase
-5. Prevents duplicates using job link normalization
-
-## 🔐 Authentication
-
-- Uses Supabase JWT stored in Chrome local storage
-- Automatically prompts login if user is not authenticated
+---
 
 ## 📌 Future Improvements
 
-- Add job status tracking (Applied, Interviewing, Rejected)
-- Sync across devices
-- AI-powered job insights / matching
+- Full application pipeline tracking  
+- Cross-device sync  
+- AI-powered job recommendations  
+
+---
 
 ## 👤 Author
 
-Anushka Pandey  
+Anushka Pandey
